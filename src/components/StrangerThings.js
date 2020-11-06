@@ -141,7 +141,7 @@ class StrangerThings extends React.Component {
               </tbody>
             </table>
           </div>
-
+          {process.env.DEVELOPMENT || <h5>Em desenvolvimento</h5>}
           <div>
             <p>Página atual: {this.state.page}</p>
           </div>
