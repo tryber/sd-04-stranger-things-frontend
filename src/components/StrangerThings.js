@@ -106,6 +106,7 @@ class StrangerThings extends React.Component {
           this.state.hereIsTheUpsideDownWorld
         )}`}
       >
+        <p style={{color:"white"}}>{process.env.REACT_APP_AMBIENT}</p>
         <div className="content strangerfy">
           <div className="change-reality">
             <button onClick={this.changeRealityClick}>
