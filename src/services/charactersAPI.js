@@ -1,8 +1,7 @@
 import axios from 'axios';
-require('dotenv').config();
 
 class CharactersService {
-  constructor({ url = process.env.REACT_APP_HAWKINS_URL, timeout = process.env.REACT_APP_HAWKINS_TIMEOUT }) {
+  constructor({ url = 'http://localhost:3000', timeout = 30000 }) {
     this.http = axios.create({
       baseURL: url,
       timeout,
