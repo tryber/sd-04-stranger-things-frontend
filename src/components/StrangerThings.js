@@ -1,18 +1,17 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
-const getRealityClass = (hereIsTheUpsideDownWorld) => (
-  hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
-);
+const getRealityClass = (hereIsTheUpsideDownWorld) =>
+  hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things';
 
 const strangerThingsConfig = {
-  url: 'http://localhost:3002',
-  timeout: 30000,
+  url: process.env.REACT_APP_HAWKINS_URL || 'http://localhost:3002',
+  timeout: process.env.REACT_APP_HAWKINS_TIMEOUT || 30000,
 };
 
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
-  timeout: 30000,
+  url: process.env.REACT_APP_UPSIDEDOWN_URL || 'http://localhost:3003',
+  timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT || 30000,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -57,7 +56,7 @@ class StrangerThings extends React.Component {
       {
         page: 1,
       },
-      this.searchCharacter(1)
+      this.searchCharacter(1),
     );
   }
 
@@ -82,7 +81,7 @@ class StrangerThings extends React.Component {
       {
         page: this.state.page + 1,
       },
-      () => this.searchCharacter()
+      () => this.searchCharacter(),
     );
   }
 
@@ -93,7 +92,7 @@ class StrangerThings extends React.Component {
       {
         page: this.state.page - 1,
       },
-      () => this.searchCharacter()
+      () => this.searchCharacter(),
     );
   }
 
@@ -101,7 +100,7 @@ class StrangerThings extends React.Component {
     return (
       <div
         className={`reality ${getRealityClass(
-          this.state.hereIsTheUpsideDownWorld
+          this.state.hereIsTheUpsideDownWorld,
         )}`}
       >
         <div className="content strangerfy">
