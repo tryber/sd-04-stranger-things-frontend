@@ -6,7 +6,7 @@ require('dotenv').config();
 const REACT_APP_HAWKINS_TIMEOUT = process.env.REACT_APP_HAWKINS_TIMEOUT;
 const REACT_APP_HAWKINS_URL = process.env.REACT_APP_HAWKINS_URL;
 const REACT_APP_UPSIDEDOWN_TIMEOUT = process.env.REACT_APP_HAWKINS_TIMEOUT;
-const REACT_APP_UPSIDEDOWN_URL = process.env.REACT_APP_HAWKINS_URL;
+const REACT_APP_UPSIDEDOWN_URL = process.env.REACT_APP_UPSIDEDOWN_URL;
 
 const getRealityClass = (hereIsTheUpsideDownWorld) =>
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things';
