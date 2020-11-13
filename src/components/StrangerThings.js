@@ -102,7 +102,7 @@ class StrangerThings extends React.Component {
       <div className={`reality ${getRealityClass(this.state.hereIsTheUpsideDownWorld)}`}>
         <div className="content strangerfy">
           <div className="change-reality">
-          <button onClick={this.changeRealityClick}> Mudar de Realidade</button>
+            <button onClick={this.changeRealityClick}> Mudar de Realidade</button>
           </div>
 
           <div>
@@ -124,7 +124,7 @@ class StrangerThings extends React.Component {
                 </tr>
               </thead>
               <tbody>
-              {this.state.characters.map(char => (
+                {this.state.characters.map(char => (
                   <tr key={char.name}>
                     <td>{char.name}</td>
                     <td>{char.origin}</td>
