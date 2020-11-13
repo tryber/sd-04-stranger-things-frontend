@@ -20,7 +20,7 @@ describe("Verifica se foi feito o deploy do frontend no Heroku", () => {
   });
   
   it("Será validado que o botão de mudar de realidade funciona.", () => {
-    cy.contains("Mudar de Realidade").click();
+    cy.contains("Mudar de realidade").click();
     cy.contains(PESQUISAR).click();
     cy.contains(INVERTED_MARTIN).should("exist");
   });
