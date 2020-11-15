@@ -13,7 +13,7 @@ class CharactersService {
       page,
       size,
       name,
-    };
+    }; // comentario
 
     return this.http.get('/', { params });
   }
