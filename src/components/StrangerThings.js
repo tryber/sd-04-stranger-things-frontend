@@ -7,7 +7,7 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const development = process.env.REACT_APP_DEVELOPMENT;
-const textDev = development ? 'Em desenvolvimento' : '';
+const textDev = development === 'true' ? 'Em desenvolvimento' : '';
 
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL || 'http://localhost:3002',
