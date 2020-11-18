@@ -6,7 +6,7 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
-const development = (process.env.REACT_APP_DEVELOPMENT === 'true');
+const development = process.env.REACT_APP_DEVELOPMENT;
 const textDev = development ? 'Em desenvolvimento' : '';
 
 const strangerThingsConfig = {
