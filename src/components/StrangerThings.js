@@ -2,6 +2,8 @@ import React from 'react';
 import CharactersService from '../services/charactersAPI';
 require('dotenv/config');
 
+const enviroment = process.env.ENVIROMENT || false;
+
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
@@ -150,6 +152,7 @@ class StrangerThings extends React.Component {
             <button onClick={this.previousPage}>Anterior</button>
             <button onClick={this.nextPage}>Próximo</button>
           </div>
+          <span>{enviroment}</span>
         </div>
       </div>
     );
