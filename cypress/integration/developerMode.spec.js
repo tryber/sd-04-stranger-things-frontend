@@ -1,7 +1,5 @@
 /// <reference types="Cypress" />
 
-// const FRONT_URL = `https://${Cypress.env('GITHUB_USER')}-st-frontend.herokuapp.com/.`
-// const FRONT_URL_PROD = `https://${Cypress.env('GITHUB_USER')}-st-frontend-prod.herokuapp.com/.`
 const FRONT_URL = `https://${Cypress.env('GITHUB_USER')}-ft.herokuapp.com/.`
 const FRONT_URL_PROD = `https://${Cypress.env('GITHUB_USER')}-pd.herokuapp.com/.`
 
