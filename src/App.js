@@ -3,6 +3,7 @@ import './App.css';
 
 import StrangerThings from './components/StrangerThings';
 
+// Iniciando o projeto
 function App() {
   return (
     <div className="App">
