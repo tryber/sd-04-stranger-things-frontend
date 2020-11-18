@@ -6,6 +6,7 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
+// Development
 const development = (process.env.REACT_APP_DEVELOPMENT === 'true');
 const textDev = development ? 'Em desenvolvimento' : '';
 
