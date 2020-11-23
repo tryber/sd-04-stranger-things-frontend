@@ -1,4 +1,4 @@
-// require('dotenv/config');
+require('dotenv/config');
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
@@ -15,6 +15,8 @@ const upsideDownConfig = {
   url: process.env.REACT_APP_UPSIDEDOWN_URL,
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
+
+const typeEnv = process.env.ENVIRONMENT || 'produção';
 
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
@@ -113,7 +115,7 @@ class StrangerThings extends React.Component {
             </button>
           </div>
 
-        <p style={{color: "red"}}>Em {process.env.ENVIRONMENT}</p>
+        <p style={{color: "red"}}>{typeEnv}</p>
 
           <div>
             <input
