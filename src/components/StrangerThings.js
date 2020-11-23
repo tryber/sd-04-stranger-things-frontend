@@ -113,7 +113,7 @@ class StrangerThings extends React.Component {
             </button>
           </div>
 
-        <p style={{color: "red"}}>Em {process.env.ENV || 'produção'}</p>
+        <p style={{color: "red"}}>Em {process.env.ENV}</p>
 
           <div>
             <input
