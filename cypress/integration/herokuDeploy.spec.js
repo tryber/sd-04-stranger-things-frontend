@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /// <reference types="Cypress" />
 
 const PESQUISAR = "Pesquisar";
@@ -11,6 +12,7 @@ describe("Verifica se foi feito o deploy do frontend no Heroku", () => {
     cy.visit(FRONT_URL);
   });
   it("Será validado que o botão de mudar de realidade existe", () => {
+    // eslint-disable-next-line no-undef
     cy.get(".change-reality").should("exist");
   });
 
