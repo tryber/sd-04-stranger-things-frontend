@@ -1,4 +1,4 @@
-require('dotenv/config');
+// require('dotenv/config');
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
@@ -112,6 +112,8 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
+
+        <p style={{color: "red"}}>Em {process.env.ENV || 'produção'}</p>
 
           <div>
             <input
