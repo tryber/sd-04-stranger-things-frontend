@@ -4,7 +4,7 @@
 const PESQUISAR = "Pesquisar";
 const MARTIN = "Martin";
 const INVERTED_MARTIN = "uᴉʇɹɐW";
-const FRONT_URL = `hhttps://thabatastrangerthings.herokuapp.com/`
+const FRONT_URL = `https://app-stranger-things.herokuapp.com?batata=${Math.random()}`
 const Claudia = "Claudia"
 
 describe("Verifica se foi feito o deploy do frontend no Heroku", () => {
