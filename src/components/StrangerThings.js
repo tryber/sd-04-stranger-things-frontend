@@ -28,7 +28,6 @@ class StrangerThings extends React.Component {
       characterName: '',
       characters: [],
       page: 1,
-      dev_mode: process.env.DEV_MODE
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -107,7 +106,7 @@ class StrangerThings extends React.Component {
         )}`}
       >
         <div className="content strangerfy">
-          {dev_mode && <h1>Em desenvolvimento</h1>}
+          <h1>Em desenvolvimento</h1>
           <div className="change-reality">
             <button onClick={this.changeRealityClick}>
               {' '}
