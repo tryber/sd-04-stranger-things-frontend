@@ -2,7 +2,7 @@
   "name": "stranger-things-client",
   "version": "0.1.0",
   "engine": {
-    "node": "10.19.0"
+    "node": "10.x"
   },
   "private": true,
   "dependencies": {
