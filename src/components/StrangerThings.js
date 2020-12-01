@@ -4,7 +4,7 @@ import CharactersService from '../services/charactersAPI';
 require('dotenv').config();
 // oi
 
-const dev = process.env.DEV === 'true';
+const dev = (process.env.REACT_APP_DEVELOPMENT === 'true');
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
