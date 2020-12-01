@@ -43,7 +43,7 @@ class StrangerThings extends React.Component {
   componentDidMount() {
     this.searchClick()
   }
-  
+
   async changeRealityClick() {
     await this.setState({
       hereIsTheUpsideDownWorld: !this.state.hereIsTheUpsideDownWorld,
@@ -156,6 +156,7 @@ class StrangerThings extends React.Component {
             <button onClick={this.previousPage}>Anterior</button>
             <button onClick={this.nextPage}>Próximo</button>
           </div>
+          {<div>Em desenvolvimento</div> && process.env.DEVELOPMENT_MODE}
         </div>
       </div>
     );
