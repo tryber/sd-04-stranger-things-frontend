@@ -1,8 +1,9 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
-require('dotenv').config();
+require('dotenv/config');
 
+console.log(process.env);
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
@@ -11,6 +12,8 @@ const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL,
   timeout: process.env.REACT_APP_HAWKINS_TIMEOUT,
 };
+
+const developmentMode = process.env.DEVELOPMENT_MODE;
 
 const upsideDownConfig = {
   url: process.env.REACT_APP_UPSIDEDOWN_URL,
@@ -23,7 +26,6 @@ const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 class StrangerThings extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       hereIsTheUpsideDownWorld: false,
       characterName: '',
@@ -41,7 +43,8 @@ class StrangerThings extends React.Component {
   }
 
   componentDidMount() {
-    this.searchClick()
+    this.searchClick();
+    console.log(developmentMode);
   }
 
   async changeRealityClick() {
@@ -111,6 +114,9 @@ class StrangerThings extends React.Component {
           this.state.hereIsTheUpsideDownWorld
         )}`}
       >
+        {`${developmentMode} asd`}
+        {process.env.DEVELOPMENT_MODE && <div>Em desenvolvimento</div>}
+
         <div className="content strangerfy">
           <div className="change-reality">
             <button onClick={this.changeRealityClick}>
@@ -156,8 +162,8 @@ class StrangerThings extends React.Component {
             <button onClick={this.previousPage}>Anterior</button>
             <button onClick={this.nextPage}>Próximo</button>
           </div>
-          {<div>Em desenvolvimento</div> && process.env.DEVELOPMENT_MODE}
         </div>
+
       </div>
     );
   }
