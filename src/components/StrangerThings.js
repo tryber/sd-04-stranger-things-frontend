@@ -2,8 +2,6 @@ require('dotenv').config();
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
-//Isso vai funcionar dessa vez
-
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
