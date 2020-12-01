@@ -36,16 +36,21 @@ class StrangerThings extends React.Component {
 
     this.searchClick = this.searchClick.bind(this);
     this.searchCharacter = this.searchCharacter.bind(this);
-
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
   }
 
-  changeRealityClick() {
-    this.setState({
+  componentDidMount() {
+    this.searchClick()
+  }
+  
+  async changeRealityClick() {
+    await this.setState({
       hereIsTheUpsideDownWorld: !this.state.hereIsTheUpsideDownWorld,
       characters: [],
     });
+    this.searchClick()
+
   }
 
   handleInput(event) {
@@ -120,7 +125,7 @@ class StrangerThings extends React.Component {
               onChange={this.handleInput}
               value={this.state.characterName}
             />
-            <button onClick={this.searchClick}>Pesquisar</button>
+            <button onClick={() => this.searchClick()}>Pesquisar</button>
           </div>
 
           <div>
