@@ -1,18 +1,22 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
+require('dotenv').config();
+
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
 const strangerThingsConfig = {
-  url: 'http://localhost:3002',
-  timeout: 30000,
+  url: process.env.REACT_APP_HAWKINS_URL,
+  timeout: process.env.REACT_APP_HAWKINS_TIMEOUT,
 };
 
+const developmentMode = process.env.REACT_APP_DEVELOPMENT_MODE === 'true';
+
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
-  timeout: 30000,
+  url: process.env.REACT_APP_UPSIDEDOWN_URL,
+  timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -21,7 +25,6 @@ const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 class StrangerThings extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       hereIsTheUpsideDownWorld: false,
       characterName: '',
@@ -34,16 +37,21 @@ class StrangerThings extends React.Component {
 
     this.searchClick = this.searchClick.bind(this);
     this.searchCharacter = this.searchCharacter.bind(this);
-
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
   }
 
-  changeRealityClick() {
-    this.setState({
+  componentDidMount() {
+    this.searchClick();
+  }
+
+  async changeRealityClick() {
+    await this.setState({
       hereIsTheUpsideDownWorld: !this.state.hereIsTheUpsideDownWorld,
       characters: [],
     });
+    this.searchClick()
+
   }
 
   handleInput(event) {
@@ -104,6 +112,7 @@ class StrangerThings extends React.Component {
           this.state.hereIsTheUpsideDownWorld
         )}`}
       >
+        {developmentMode && <div>Em desenvolvimento</div>}
         <div className="content strangerfy">
           <div className="change-reality">
             <button onClick={this.changeRealityClick}>
@@ -118,7 +127,7 @@ class StrangerThings extends React.Component {
               onChange={this.handleInput}
               value={this.state.characterName}
             />
-            <button onClick={this.searchClick}>Pesquisar</button>
+            <button onClick={() => this.searchClick()}>Pesquisar</button>
           </div>
 
           <div>
@@ -150,6 +159,7 @@ class StrangerThings extends React.Component {
             <button onClick={this.nextPage}>Próximo</button>
           </div>
         </div>
+
       </div>
     );
   }
