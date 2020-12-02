@@ -3,7 +3,7 @@ require('dotenv').config();
 
 class CharactersService {
   constructor({
-    url = 'http://localhost:3001' || process.env.REACT_APP_HAWKINS_URL,
+    url = process.env.REACT_APP_HAWKINS_URL || 'http://localhost:3001',
     timeout = 30000,
   }) {
     this.http = axios.create({
