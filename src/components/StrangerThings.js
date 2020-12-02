@@ -75,7 +75,7 @@ class StrangerThings extends React.Component {
         });
       });
   }
-
+// teste 
   nextPage() {
     if (!this.state.characters.length) return;
 
