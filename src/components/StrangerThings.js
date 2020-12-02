@@ -3,11 +3,12 @@ import CharactersService from '../services/charactersAPI';
 
 require('dotenv').config();
 
-const dev = (process.env.DEV === 'true');
-
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
-);
+  );
+  
+const dev = (process.env.REACT_APP_DEV === 'true');
+// oi
 
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL,
@@ -108,7 +109,7 @@ class StrangerThings extends React.Component {
           this.state.hereIsTheUpsideDownWorld
         )}`}
       >
-        {dev && <p>Em desenvolvimento</p>}
+      
         <div className="content strangerfy">
           <div className="change-reality">
             <button onClick={this.changeRealityClick}>
@@ -116,7 +117,7 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
-
+          {dev && <p>Em desenvolvimento</p>}
           <div>
             <input
               placeholder="Nome do Personagem"
