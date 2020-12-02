@@ -3,7 +3,7 @@ import CharactersService from '../services/charactersAPI';
 
 require('dotenv').config();
 
-const dev = process.env.DEV === 'true';
+const dev = (process.env.DEV === 'true');
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
