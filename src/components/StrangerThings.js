@@ -99,7 +99,7 @@ class StrangerThings extends React.Component {
       () => this.searchCharacter()
     );
   }
-
+// INDEX
   render() {
     return (
       <div
