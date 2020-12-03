@@ -15,7 +15,6 @@ const upsideDownConfig = {
   url: process.env.REACT_APP_UPSIDEDOWN_URL,
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
-
 const reactDev = process.env.REACT_APP_DEVELOPMENT; 
 const isDev = reactDev === 'true' ? 'Em desenvolvimento': '';
 
@@ -108,7 +107,7 @@ class StrangerThings extends React.Component {
           this.state.hereIsTheUpsideDownWorld
         )}`}
       >
-        {isDev}
+        <div>{isDev}</div>
         <div className="content strangerfy">
           <div className="change-reality">
             <button onClick={this.changeRealityClick}>
