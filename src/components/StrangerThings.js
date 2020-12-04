@@ -106,7 +106,7 @@ class StrangerThings extends React.Component {
           <div className="change-reality">
             <button onClick={this.changeRealityClick}> Mudar de Realidade</button>
           </div>
-
+          {process.env.DEV && <p>"Em desenvolvimento"</p>}
           <div>
             <input
               placeholder="Nome do Personagem"
