@@ -2,6 +2,7 @@ import axios from 'axios';
 
 class CharactersService {
   constructor({ url = 'http://localhost:3000', timeout = 30000 }) {
+    console.log("url", url);
     this.http = axios.create({
       baseURL: url,
       timeout,
