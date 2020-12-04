@@ -15,7 +15,7 @@ console.log("strangerThingsConfig", strangerThingsConfig.timeout);
 const upsideDownConfig = {
   url: process.env.REACT_APP_UPSIDEDOWN_URL,
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
-  env: process.env.ENVI,
+  env: process.env.ENI,
 };
 
 const envi = process.env.ENVIRONMENT || '';
