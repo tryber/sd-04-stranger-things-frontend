@@ -101,7 +101,6 @@ class StrangerThings extends React.Component {
   }
 
   render() {
-    console.log("env", envi);
     return (
       <div
         className={`reality ${getRealityClass(
