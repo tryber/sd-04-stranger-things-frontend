@@ -116,7 +116,7 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
-          <p style={{color: "green"}}>{envi}</p>
+          <p style={{color: "green"}}>{upsideDownConfig.url}</p>
           <div>
             <input
               placeholder="Nome do Personagem"
