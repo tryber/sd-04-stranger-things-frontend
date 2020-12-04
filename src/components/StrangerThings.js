@@ -13,9 +13,9 @@ const strangerThingsConfig = {
 console.log("strangerThingsConfig", strangerThingsConfig.url);
 console.log("strangerThingsConfig", strangerThingsConfig.timeout);
 const upsideDownConfig = {
-  url: process.env.REACT_APP_UPSIDEDOWN_URL,
+  url: process.env.REACT_APP_ENVIRONMENT,
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
-  env: process.env.ENVIRONMENT,
+  env: process.env.REACT_APP_UPSIDEDOWN_URL,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -115,7 +115,9 @@ class StrangerThings extends React.Component {
             </button>
           </div>
           <p style={{color: "green"}}>{upsideDownConfig.env}</p>
+          <p style={{color: "green"}}>{upsideDownConfig.timeout}</p>
           <p style={{color: "green"}}>{upsideDownConfig.url}</p>
+          <p style={{color: "green"}}>{strangerThingsConfig.url}</p>
           <div>
             <input
               placeholder="Nome do Personagem"
