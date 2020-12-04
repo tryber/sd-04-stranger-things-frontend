@@ -16,7 +16,7 @@ const upsideDownConfig = {
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
   env: process.env.REACT_APP_ENVIRONMENT,
 };
-
+// delip
 const env = upsideDownConfig.env || "";
 
 const charactersService = new CharactersService(strangerThingsConfig);
