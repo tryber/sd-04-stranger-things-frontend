@@ -10,14 +10,15 @@ const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL,
   timeout: process.env.REACT_APP_HAWKINS_TIMEOUT,
 };
-console.log("strangerThingsConfig", strangerThingsConfig.url);
-console.log("strangerThingsConfig", strangerThingsConfig.timeout);
+
 const upsideDownConfig = {
-  url: process.env.REACT_APP_ENVIRONMENT,
+  url: process.env.REACT_APP_UPSIDEDOWN_URL,
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
-  env: process.env.REACT_APP_UPSIDEDOWN_URL,
+  env: process.env.REACT_APP_ENVIRONMENT,
 };
-// vhh
+
+const env = upsideDownConfig.env || "";
+
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
@@ -114,7 +115,7 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
-          <p style={{color: "green"}}>{upsideDownConfig.env}</p>
+          <p style={{color: "green"}}>{env}</p>
           <p style={{color: "green"}}>{upsideDownConfig.timeout}</p>
           <p style={{color: "green"}}>{upsideDownConfig.url}</p>
           <p style={{color: "green"}}>{strangerThingsConfig.url}</p>
