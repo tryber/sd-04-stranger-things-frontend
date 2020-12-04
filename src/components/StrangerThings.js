@@ -116,9 +116,6 @@ class StrangerThings extends React.Component {
             </button>
           </div>
           <p style={{color: "green"}}>{env}</p>
-          <p style={{color: "green"}}>{upsideDownConfig.timeout}</p>
-          <p style={{color: "green"}}>{upsideDownConfig.url}</p>
-          <p style={{color: "green"}}>{strangerThingsConfig.url}</p>
           <div>
             <input
               placeholder="Nome do Personagem"
