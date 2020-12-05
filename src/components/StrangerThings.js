@@ -17,7 +17,7 @@ const upsideDownConfig = {
 };
 
 const developmentMode = process.env.REACT_APP_DEVELOPMENT;
-const isDeveloping = developmentMode === 'true' ? 'Em desenvolvimento' : null;
+const isDeveloping = developmentMode === 'true' ? 'Em desenvolvimento' : '';
 
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
