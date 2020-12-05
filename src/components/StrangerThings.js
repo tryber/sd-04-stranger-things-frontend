@@ -47,6 +47,8 @@ class StrangerThings extends React.Component {
     });
   }
 
+// teste
+
   handleInput(event) {
     this.setState({
       characterName: event.target.value,
