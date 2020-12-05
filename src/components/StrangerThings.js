@@ -88,6 +88,7 @@ class StrangerThings extends React.Component {
   }
 
 // crédito à explicação da Tereza
+// crédito à ajuda da Estela
 
   previousPage() {
     if (this.state.page <= 1) return;
