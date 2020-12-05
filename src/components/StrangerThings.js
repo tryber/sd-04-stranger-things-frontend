@@ -3,7 +3,7 @@ import CharactersService from '../services/charactersAPI';
 import dontenv from 'dotenv';
 dontenv.config();
 
-const isInDevelopment = process.env.REACT_APP_DEV === 'true';
+const isInDevelopment = process.env.REACT_APP_DEV !== 'true';
 
 const getRealityClass = (hereIsTheUpsideDownWorld) =>
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things';
