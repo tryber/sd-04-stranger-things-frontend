@@ -107,7 +107,8 @@ handleInput(event) {
     return (
       <div className={`reality ${getRealityClass(this.state.hereIsTheUpsideDownWorld)}`}>
         <div className="content strangerfy">
-          {process.env.REACT_APP_DEVELOPMENT === 'desenvolvimento' && <h1>Em desenvolvimento</h1>}
+          <h1>Desenvolvimento!</h1>
+          {process.env.REACT_APP_DEVELOPMENT === 'desenvolvimento' && <h2>Aplicação em desenvolvimento</h2>}
           <div className="change-reality">
             <button onClick={this.changeRealityClick}>Mudar de realidade</button>
           </div>
