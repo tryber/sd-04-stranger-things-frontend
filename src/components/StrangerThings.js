@@ -20,7 +20,7 @@ const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
 const workType = () => {
   const typeWork = process.env.REACT_APP_ENVIROMENT;
-  console.log(typeWork);
+//  console.log(typeWork);
   if (typeWork) return <p>{typeWork}</p>;
   return <div />;
 }
