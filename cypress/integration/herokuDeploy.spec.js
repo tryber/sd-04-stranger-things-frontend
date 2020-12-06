@@ -1,9 +1,10 @@
+/* eslint-disable no-undef */
 /// <reference types="Cypress" />
 
 const PESQUISAR = "Pesquisar";
 const MARTIN = "Martin";
 const INVERTED_MARTIN = "uᴉʇɹɐW";
-const FRONT_URL = `https://${Cypress.env('GITHUB_USER')}-ft.herokuapp.com/.`
+const FRONT_URL = `https://app-stranger-things.herokuapp.com?batata=${Math.random()}`
 const Claudia = "Claudia"
 
 describe("Verifica se foi feito o deploy do frontend no Heroku", () => {
@@ -11,6 +12,7 @@ describe("Verifica se foi feito o deploy do frontend no Heroku", () => {
     cy.visit(FRONT_URL);
   });
   it("Será validado que o botão de mudar de realidade existe", () => {
+    // eslint-disable-next-line no-undef
     cy.get(".change-reality").should("exist");
   });
 
@@ -20,7 +22,7 @@ describe("Verifica se foi feito o deploy do frontend no Heroku", () => {
   });
   
   it("Será validado que o botão de mudar de realidade funciona.", () => {
-    cy.contains("Mudar de Realidade").click();
+    cy.contains("Mudar de realidade").click();
     cy.contains(PESQUISAR).click();
     cy.contains(INVERTED_MARTIN).should("exist");
   });
