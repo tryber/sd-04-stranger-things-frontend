@@ -9,8 +9,8 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 const DEVELOPMENT = process.env.REACT_APP_DEV === 'true';
 
 const strangerThingsConfig = {
-  url: process.env.REACT_APP_HAWKINGS_URL,
-  timeout: process.env.REACT_APP_HAWKINGS_TIMEOUT,
+  url: process.env.REACT_APP_HAWKINS_URL,
+  timeout: process.env.REACT_APP_HAWKINS_TIMEOUT,
 };
 
 const upsideDownConfig = {
